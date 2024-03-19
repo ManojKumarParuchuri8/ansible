@@ -1,12 +1,13 @@
-- name: install and run nginx
-  hosts:  web 
-  become: yes 
-  tasks:  
-  - name: install nginx package
-    ansible.builtin.package:
-      name: nginx 
-      state: present
-  - name: run nginx
-    ansible.builtin.service:
-      name: nginx 
-      state:  started
+- name: Variables from prompt 
+  hosts: localhost
+  vars_prompt:
+  - name: USERNAME
+    prompt: Please enter your UserName
+    private: false 
+  - name: PASSWORD
+    prompt: Please enter your password
+    private: true 
+  tasks:
+  - name: print and check the values
+    ansible.builtin.debug:
+      msg: "Your username is {{USERNAME}} your password is {{PASSWORD}}"
