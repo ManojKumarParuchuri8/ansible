@@ -11,6 +11,8 @@ localhost
 Course="Devops from inventory"
 Trainer="Siva kumar"
 Duration="110HRS"
+PERSON="Manoj From Inventory"
+WISHES="Morning From Inventory"
 
 [catalogue]
 192.0.0.3
