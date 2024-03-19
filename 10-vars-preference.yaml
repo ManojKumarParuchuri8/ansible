@@ -16,6 +16,6 @@
   - name: Variables Preference 
     vars:
       PERSON: "Manoj From task"
-      WISHES: "Morning From Play"
+      WISHES: "Morning From task"
     ansible.builtin.debug:
       msg: "Hi {{PERSON}} Good {{WISHES}}"
