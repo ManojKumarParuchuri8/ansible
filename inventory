@@ -4,6 +4,14 @@
 [web]
 54.91.137.78
 
+[localhost]
+localhost 
+
+[localhost:vars]
+Course="Devops from inventory"
+Trainer="Siva kumar"
+Duration="110HRS"
+
 [catalogue]
 192.0.0.3
 192.0.0.4
