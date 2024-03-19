@@ -1,0 +1,15 @@
+[web]
+44.202.27.129
+
+[catalogue]
+125.0.0.3
+125.0.0.4
+
+[cart]
+125.0.0.1
+125.0.0.2
+
+[roboshop:children]
+web 
+catalogue 
+cart 
