@@ -12,7 +12,7 @@
       AWS: 6
       Docker: 4 
     Trainer: true  # boolean 
-    tasks:
+  tasks:
     - name: printing key value pair
       ansible.builtin.debug:
         msg: "Name: {{NAME}} "
