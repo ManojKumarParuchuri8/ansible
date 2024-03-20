@@ -15,13 +15,13 @@
   tasks:
     - name: printing key value pair
       ansible.builtin.debug:
-        msg: "Name: {{NAME}} "
+        msg: "{{NAME}} "
     - name: printing list data type
       ansible.builtin.debug:
-        msg: "Siva kumar have {{Skills}}"
+        msg: "{{Skills}}"
     - name: printing map data type 
       ansible.builtin.debug:
-        msg: "Siva kumar have {{Experience}}"
+        msg: "{{Experience}}"
     - name: printing boolean
       ansible.builtin.debug:
         msg: "{{Trainer}}"
