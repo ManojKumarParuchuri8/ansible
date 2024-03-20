@@ -24,4 +24,4 @@
         msg: "Siva kumar have {{Experience}}"
     - name: printing boolean
       ansible.builtin.debug:
-        msg: "Trainer {{Trainer}}"
+        msg: "{{Trainer}}"
