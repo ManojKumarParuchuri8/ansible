@@ -1,13 +1,13 @@
-- name: Enter your username and password
-  hosts: localhost 
+- name: USERNAME and PASSWORD
+  hosts: localhost
   vars_prompt:
   - name: USERNAME
-    prompt: Please enter your username
+    prompt: Enter Your USERNAME
     private: false 
   - name: PASSWORD
-    prompt: Please enter your password
+    prompt: Enter Your PASSWORd
     private: true 
   tasks:
-  - name: Printing your username and password just for validation
+  - name: Displaying your username and password
     ansible.builtin.debug:
-      msg: "Your username {{USERNAME}} and password is {{PASSWORD}}"
+      msg: "This is your {{USERNAME}} and {{PASSWORD}}"
