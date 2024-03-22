@@ -1,6 +1,6 @@
-- name: variables from inventory 
-  hosts: localhost 
+- name: Variables from Args
+  hosts: localhost
   tasks:
-  - name: printing variables from inventory
+  - name: These are variables from args
     ansible.builtin.debug:
-      msg: "Hi my name is {{Name}} I completed {{Degree}}"
+      msg: "Hi my name is {{Name}} I am Learning {{Technology}}"
