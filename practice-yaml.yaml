@@ -1,8 +1,13 @@
-- name: Printing Manoj Details
-  hosts: localhost
-  vars_files:
-  - variables.yaml
+- name: Enter your username and password
+  hosts: localhost 
+  vars_prompt:
+  - name: USERNAME
+    prompt: Please enter your username
+    private: false 
+  - name: PASSWORD
+    prompt: Please enter your password
+    private: true 
   tasks:
-  - name: This is about me
+  - name: Printing your username and password just for validation
     ansible.builtin.debug:
-      msg: "Hi My name is {{Name}} I completed my Btech in the stream of {{Stream}} from {{College}}"
+      msg: "Your username {{USERNAME}} and password is {{PASSWORD}}"
