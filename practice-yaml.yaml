@@ -5,4 +5,4 @@
   tasks:
   - name: This is about me
     ansible.builtin.debug:
-      msg: "Hi My name is {{name}} I completed my Btech in the stream of {{Stream}} from {{College}}"
+      msg: "Hi My name is {{Name}} I completed my Btech in the stream of {{Stream}} from {{College}}"
