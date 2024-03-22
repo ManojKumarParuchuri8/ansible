@@ -1,12 +1,13 @@
-- name: install and run nginx
+- name: Task1 and Play1
   hosts: web
-  become: yes 
   tasks:
-  - name: install Nginx
-    ansible.builtin.package:
-      name: nginx 
-      state: present 
-  - name: run nginx
-    ansible.builtin.service:
-      name: nginx 
-      state: started 
+  - name: Message is from task 1 and play 1
+    ansible.builtin.debug:
+      msg: "Hi I am from play 1"
+
+- name: Task2 and Play2
+  hosts: web
+  tasks:
+  - name: Message is from Task2 and Play2
+    ansible.builtin.debug:
+      msg: :Hi I am from play 2"
