@@ -1,20 +1,11 @@
-- name: About Manoj Kumar
-  hosts: web
+- name: About manoj 
+  hosts: localhost 
+  vars:
+    Name: Manoj Kumar
+    Degree: Btech
+    College: GVPCOE
+    Comapny: Prodapt
   tasks:
-  - name: This is about Manoj Kumar Native Place 
+  - name: printing manoj information
     ansible.builtin.debug:
-      msg: "Hi I am manoj kumar I was born and broughtup in repalle"
-
-- name: About Manoj kumar Professional experience
-  hosts: web 
-  tasks:
-  - name: About manoj kumar details
-    ansible.builtin.debug:
-      msg: "I completed my BTECH in GVPCOE"
-  
-- name: About manoj kumar Professional Experience
-  hosts: web 
-  tasks:
-  - name: Manoj Kumar Work Experience 
-    ansible.builtin.debug:
-      msg: "I have total one year experience on software side"
+      msg: "Hi My name is {{Name}} I completed my {{Degree}} My college name is {{College}} I worked in {{Company}}"
