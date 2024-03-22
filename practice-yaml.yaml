@@ -1,11 +1,8 @@
-- name: Manoj Details
-  hosts: localhost 
-  vars:
-    degree: Diploma
+- name: Printing Manoj Details
+  hosts: localhost
+  vars_files:
+  - variables.yaml
   tasks:
-  - name: Printing Manoj Details
-    vars:
-      Name: Manoj kumar
-      Degree: Btech
+  - name: This is about me
     ansible.builtin.debug:
-      msg: "Hi My name is {{Name}} I completed my {{Degree}}"
+      msg: "Hi My name is {{name}} I completed my Btech in the stream of {{Stream}} from {{College}}"
