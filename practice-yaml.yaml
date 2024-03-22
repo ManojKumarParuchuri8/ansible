@@ -1,5 +1,5 @@
 - name: Manoj Details
-  hosts: loclahost 
+  hosts: localhost 
   vars:
     degree: Diploma
   tasks:
