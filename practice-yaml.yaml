@@ -1,11 +1,11 @@
-- name: About manoj kumar
-  hosts: localhost 
+- name: Manoj Details
+  hosts: loclahost 
   vars:
-    Name: Manoj kumar
-    Degree: Btech
-    Hobbies: Watching Movies
-    Company: Prodapt
+    degree: Diploma
   tasks:
   - name: Printing Manoj Details
+    vars:
+      Name: Manoj kumar
+      Degree: Btech
     ansible.builtin.debug:
-      msg: "Hi My name is {{Name}} I completed my {{Degree}} My Hobbies are {{Hobbies}} My company name was {{Company}}"
+      msg: "Hi My name is {{Name}} I completed my {{Degree}}"
