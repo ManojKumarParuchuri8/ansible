@@ -1,13 +1,6 @@
-- name: USERNAME and PASSWORD
-  hosts: localhost
-  vars_prompt:
-  - name: USERNAME
-    prompt: Enter Your USERNAME
-    private: false 
-  - name: PASSWORD
-    prompt: Enter Your PASSWORd
-    private: true 
+- name: variables from inventory 
+  hosts: localhost 
   tasks:
-  - name: Displaying your username and password
+  - name: printing variables from inventory
     ansible.builtin.debug:
-      msg: "This is your {{USERNAME}} and {{PASSWORD}}"
+      msg: "Hi my name is {{Name}} I completed {{Degree}}"
