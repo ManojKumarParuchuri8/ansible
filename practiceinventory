@@ -8,8 +8,9 @@
 192.0.0.3
 192.0.0.4 
 
-Name: Manojkumar
-Degree: Btech
+[localhost:vars]
+Name="Manojkumar"
+Degree="Btech"
 
 [cart]
 192.0.0.5
