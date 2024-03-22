@@ -4,7 +4,7 @@
     Name: Manoj Kumar
     Degree: Btech
     College: GVPCOE
-    Comapny: Prodapt
+    Comapany: Prodapt
   tasks:
   - name: printing manoj information
     ansible.builtin.debug:
