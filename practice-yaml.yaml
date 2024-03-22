@@ -1,13 +1,5 @@
-- name: Variables from prompt 
-  hosts: localhost
-  vars_prompt:
-  - name: USERNAME
-    prompt: Please enter your UserName
-    private: false 
-  - name: PASSWORD
-    prompt: Please enter your password
-    private: true 
+- name: ping playbook
+  hosts: web 
   tasks:
-  - name: print and check the values
-    ansible.builtin.debug:
-      msg: "Your username is {{USERNAME}} your password is {{PASSWORD}}"
+  - name: ping the server
+    ansible.builtin.ping:
