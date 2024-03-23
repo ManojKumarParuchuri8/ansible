@@ -1,12 +1,12 @@
-- name: packages
-  hosts: web 
+- name: installing packages
+  hosts: loclahost 
   become: yes 
   tasks:
-  - name: Installing packages
+  - installing package one by one 
     ansible.builtin.package:
       name: "{{item}}"
       state: present 
     loop:
     - git 
-    - ansible
+    - ansible 
     - nginx 
