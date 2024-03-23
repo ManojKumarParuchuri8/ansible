@@ -1,5 +1,5 @@
 - name: installing and uninstalling through loops
-  hosts: loclahost
+  hosts: localhost
   become: yes
   tasks:
   - name: installing and uninstalling packages

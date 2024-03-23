@@ -1,6 +1,27 @@
-- name: Variables from Args
-  hosts: localhost
+- name: checking data types
+  hosts: loclahost
+  vars:
+    Name: Manoj kumar
+    Skills:
+    - AWS
+    - Python
+    - Java
+    Experience:
+      AWS: 10
+      GCP: 10
+      Python: 5
+    Trainer: yes
   tasks:
-  - name: These are variables from args
+  - name: printing key value pair 
     ansible.builtin.debug:
-      msg: "Hi my name is {{Name}} I am Learning {{Technology}}"
+      msg: "My name is {{Name}}"
+  - name: printing My Skills
+    ansible.builtin.debug:
+      msg: "Skills are {{Skills}}"
+  - name: Printing my experience
+    ansible.builtin.debug:
+      msg: "I have {{Experience}}"
+  - name: Am i a Trainer
+    ansible.builtin.debug:
+      msg: "Are you a trainer {{Trainer}}"
+      
