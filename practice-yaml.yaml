@@ -1,12 +1,12 @@
-- name: installing packages
-  hosts: localhost 
+- name: advanced loops
+  hosts: web 
   become: yes 
   tasks:
   - name: installing package one by one 
     ansible.builtin.package:
-      name: "{{item}}"
-      state: present 
+      name: "{{item.name}}"
+      state: "{{item.state}}"
     loop:
-    - git 
-    - ansible 
-    - nginx 
+    - {name: git, state: present}
+    - {name: nginx, state: absent}
+    - {name: ansible, state: present}
