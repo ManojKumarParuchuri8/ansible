@@ -1,10 +1,12 @@
-- name: practicing loops
-  hosts: localhost
+- name: packages
+  hosts: web 
+  become: yes 
   tasks:
-  - name: printing names
-    ansible.builtin.debug:
-      msg: "Hello {{item}}"
+  - name: Installing packages
+    ansible.builtin.package:
+      name: {{item}}
+      state: present 
     loop:
-    - Manoj
-    - Jeevan
-    - Kusvanth
+    - git 
+    - ansible
+    - nginx 
