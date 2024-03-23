@@ -1,18 +1,10 @@
-- name: practicing condition in ansible
-  hosts: localhost 
-  become: yes 
+- name: creating user
+  hosts: loclahost
   tasks:
-  - name: check roboshop user exist or not
+  - name: Checking user
     ansible.builtin.command: id roboshop
-    register: user
+    register: user 
     ignore_errors: yes 
-  - name: printing user variable
+  - name: printing user value 
     ansible.builtin.debug:
-      msg: "output is {{user}}"
-  - name: printing exit status
-    ansible.builtin.debug:
-      msg: "{{user.rc}}"
-  - name: creating user 
-    ansible.builtin.user:
-      name: roboshop
-    when: user.rc != 0 
+      msg: "{{user}}"
