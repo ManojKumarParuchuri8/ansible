@@ -1,8 +1,8 @@
 - name: installing packages
-  hosts: loclahost 
+  hosts: localhost 
   become: yes 
   tasks:
-  - installing package one by one 
+  - name: installing package one by one 
     ansible.builtin.package:
       name: "{{item}}"
       state: present 
