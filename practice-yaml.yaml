@@ -1,5 +1,5 @@
 - name: creating user
-  hosts: loclahost
+  hosts: localhost
   tasks:
   - name: Checking user
     ansible.builtin.command: id roboshop
