@@ -1,27 +1,10 @@
-- name: checking data types
-  hosts: localhost
-  vars:
-    Name: Manoj kumar
-    Skills:
-    - AWS
-    - Python
-    - Java
-    Experience:
-      AWS: 10
-      GCP: 10
-      Python: 5
-    Trainer: yes
+- name: practicing condition in ansible
+  hosts: localhost 
+  become: yes 
   tasks:
-  - name: printing key value pair 
+  - name: check roboshop user exist or not
+    ansible.builtin.command: id roboshop
+    register: user
+  - name: printing user variable
     ansible.builtin.debug:
-      msg: "My name is {{Name}}"
-  - name: printing My Skills
-    ansible.builtin.debug:
-      msg: "Skills are {{Skills}}"
-  - name: Printing my experience
-    ansible.builtin.debug:
-      msg: "I have {{Experience}}"
-  - name: Am i a Trainer
-    ansible.builtin.debug:
-      msg: "Are you a trainer {{Trainer}}"
-      
+      msg: "output is {{user}}"
